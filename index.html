@@ -1,102 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet Hot Singles Near You</title>
+  <title>Célibataires Sexy Près de Chez Toi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
       text-align: center;
-    }
-    .container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 0 20px;
     }
-    .content {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 15px;
-      max-width: 400px;
-      text-align: center;
-      backdrop-filter: blur(10px);
+
+    .container {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      width: 90%;
+      max-width: 420px;
+      animation: fadeIn 1s ease-in-out;
     }
-    .warning {
-      background-color: #ff3366;
-      color: white;
-      font-size: 14px;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #00ff99;
     }
+
     p {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 20px;
     }
-    .cta-button {
-      background-color: #ff3366;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
+
+    .geo {
+      font-weight: bold;
+      color: #00cc66;
+      margin-bottom: 20px;
+    }
+
+    .timer {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #ff6666;
+    }
+
+    .cta {
+      background: #00cc66;
+      color: #fff;
       font-size: 18px;
-      border-radius: 10px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
       display: inline-block;
-      transition: background-color 0.3s;
+      transition: background 0.3s ease;
+      cursor: pointer;
     }
-    .cta-button:hover {
-      background-color: #e6004c;
+
+    .cta:hover {
+      background: #00b359;
     }
-    .disclaimer {
-      font-size: 14px;
-      opacity: 0.7;
-      margin-top: 20px;
+
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      p, .timer { font-size: 14px; }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <div class="content">
-      <div class="warning">🔞 18+ WARNING: Adult Content</div>
-      <h1>🔥 Meet Hot Singles Near You</h1>
-      <p>Thousands are ready to connect. Are you 18+ and ready to chat?</p>
-      <a href="https://your-cpa-link.com" class="cta-button">Yes, I am 18+ – Enter Now</a>
-      <p class="disclaimer">*This is an advertisement. You must be 18 or older to continue.</p>
-    </div>
-</div>
+    <h1>🔥 Célibataires Sexy Tout Près</h1>
+    <p>Plus de 1000 célibataires en ligne dans ta région.</p>
+    <div class="geo" id="geoLocation">Chargement de ta région...</div>
+    <div class="timer" id="countdown">Offre expire dans : 03:00</div>
+    <div class="cta" id="ctaBtn">Commencer Maintenant</div>
+  </div>
 
+  <script>
+    // === GEO IP ===
+    fetch("https://ipapi.co/json/")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("geoLocation").textContent = `📍 Utilisateurs actifs en ${data.country_name}`;
+      })
+      .catch(() => {
+        document.getElementById("geoLocation").textContent = "📍 Utilisateurs actifs dans ta région";
+      });
 
-</div>
-<script defer src=https://www.cemiocw.com/im_jerky?&lang=en&mode=prerecorded&outlinkUrl=https://t.mbdaad.link/134119/3785/0?bo=Array&target=pushnotifications&file_id=252177&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0018></script>
-</div>
-<iframe src="https://www.shfsdvc.com/en/us/about?zid=15442&pid=0&custom1=SPOT_SALESFORCE&custom2=134119&custom3=TS-{campaign_id}&custom4=PUB_{src_hostname}&custom7=KW&custom8=a.vfghe.com&custom9=487c489c-8ee4-40f8-b2ec-dc0e342b5275" style="width: 300px; height: 250px; border: 0px solid; vertical-align: bottom;" scrolling="no"></iframe>
-</div>
-</div>
+    // === Countdown Timer ===
+    let timerDuration = 120; // 2 minutes in seconds
+    const countdownEl = document.getElementById("countdown");
+    const backupURL = "https://your-backup-offer-link.com"; // 🟥 ব্যাকআপ CPA অফার লিংক দিন
 
-<iframe src="https://www.shfsdvc.com/en/us/about?zid=15434&pid=0&custom1=SPOT_SALESFORCE&custom2=134119&custom3=TS-{campaign_id}&custom4=PUB_{src_hostname}&custom7=KW&custom8=a.vfghe.com&custom9=487c489c-8ee4-40f8-b2ec-dc0e342b5275" style="width: 300px; height: 100px; border: 0px solid; vertical-align: bottom;" scrolling="no"></iframe>
-</div>
+    const updateTimer = () => {
+      const minutes = Math.floor(timerDuration / 60);
+      const seconds = timerDuration % 60;
+      countdownEl.textContent = `Offre expire dans : ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (timerDuration === 0) {
+        window.location.href = backupURL; // রিডাইরেক্ট
+      }
 
-<a href="https://t.mbdaad.link/134119/3785/0?bo=Array&target=pushnotifications&file_id=554095&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"><img src="https://www.imglnkx.com/3785/010765A_GDAT_18_ALL_EN_71_L.jpg" width="300" height="250" border="0" /></a>
-</div>
-</div>
+      if (timerDuration > 0) timerDuration--;
+    };
 
-<iframe src="https://www.shfsdvc.com/en/us/about?zid=15434&pid=0&custom1=SPOT_SALESFORCE&custom2=134119&custom3=TS-{campaign_id}&custom4=PUB_{src_hostname}&custom7=KW&custom8=a.vfghe.com&custom9=487c489c-8ee4-40f8-b2ec-dc0e342b5275" style="width: 300px; height: 100px; border: 0px solid; vertical-align: bottom;" scrolling="no"></iframe>
-</div>
-<a href="https://t.mbdaad.link/134119/3785/0?bo=Array&target=pushnotifications&file_id=554082&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0002"><img src="https://www.imglnkx.com/3785/010769A_GDAT_18_ALL_EN_71_L.jpg" width="300" height="250" border="0" /></a>
-</div>
+    setInterval(updateTimer, 1000);
 
+    // === CPA Link with Popup + Fallback ===
+    const mainOfferURL = "https://your-main-offer-link.com";
+    
+    document.getElementById("ctaBtn").addEventListener("click", function () {
+      const win = window.open(mainOfferURL, "_blank");
 
+      setTimeout(() => {
+        if (!win || win.closed || typeof win.closed === "undefined") {
+          window.location.href = backupURL;
+        }
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
